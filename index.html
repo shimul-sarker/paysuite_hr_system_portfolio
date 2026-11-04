@@ -10,7 +10,7 @@
 <meta name="theme-color" content="#0B1B33">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,600;12..96,700&family=Hanken+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@500;600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@3.44.0/dist/tabler-icons.min.css">
 <style>
 :root{
@@ -24,8 +24,8 @@
   --blue:#3569CF; --blue-soft:#E7EEFC;
   --on-dark:#E8EEF8; --on-dark-2:#9FB0CA; --dark-line:rgba(255,255,255,.1);
   --r-sm:8px; --r-md:12px; --r-lg:18px;
-  --display:'Bricolage Grotesque','Hanken Grotesk',system-ui,sans-serif;
-  --body:'Hanken Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif;
+  --display:'Plus Jakarta Sans','Inter',system-ui,sans-serif;
+  --body:'Inter',system-ui,-apple-system,'Segoe UI',sans-serif;
   /* legacy aliases used by demo renderers */
   --paper-2:#EEF2F7; --card:#fff; --ink-soft:#3C4B63; --muted:#8593A8; --line-soft:#EDF1F6;
   --acc-green:var(--green); --acc-red:var(--red); --acc-gold:var(--amber); --acc-blue:var(--blue);
@@ -33,7 +33,7 @@
 }
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
 html{scroll-behavior:smooth;scroll-padding-top:84px}
-body{font-family:var(--body);color:var(--ink);background:var(--white);line-height:1.6;font-size:16px;-webkit-font-smoothing:antialiased;font-variant-numeric:tabular-nums}
+body{font-family:var(--body);font-feature-settings:'cv11','ss01';color:var(--ink);background:var(--white);line-height:1.6;font-size:16px;-webkit-font-smoothing:antialiased;font-variant-numeric:tabular-nums}
 a{color:inherit}
 img{max-width:100%;display:block}
 button{font:inherit;color:inherit;cursor:pointer}
@@ -77,7 +77,7 @@ button{font:inherit;color:inherit;cursor:pointer}
 .hero-grid{display:grid;grid-template-columns:minmax(0,11fr) minmax(0,13fr);gap:56px;align-items:center;padding:84px 0 88px}
 .hero-pill{display:inline-flex;align-items:center;gap:9px;padding:7px 14px 7px 10px;border:1px solid rgba(63,202,218,.35);background:rgba(63,202,218,.08);border-radius:999px;font-size:13.5px;font-weight:500;color:#BFEFF5;margin-bottom:26px}
 .hero-pill i{width:8px;height:8px;border-radius:50%;background:var(--brand-bright);box-shadow:0 0 0 4px rgba(63,202,218,.2)}
-.hero h1{font-family:var(--display);font-weight:600;font-size:clamp(36px,3.9vw,54px);line-height:1.06;letter-spacing:-.028em;color:#fff;text-wrap:balance}
+.hero h1{font-family:var(--display);font-weight:700;font-size:clamp(36px,3.9vw,54px);line-height:1.06;letter-spacing:-.028em;color:#fff;text-wrap:balance}
 .hero-sub{margin-top:24px;font-size:18px;line-height:1.7;color:var(--on-dark-2);max-width:520px}
 .hero-sub b{color:#fff;font-weight:600}
 .hero-cta{display:flex;flex-wrap:wrap;gap:12px;margin-top:34px}
@@ -138,7 +138,7 @@ section.sec{padding:104px 0}
 .sec.alt{background:var(--paper)}
 .sec.dark{background:var(--navy-900);color:var(--on-dark)}
 .sec-head{max-width:720px;margin-bottom:56px}
-.sec-head h2{font-family:var(--display);font-weight:600;font-size:clamp(30px,3.6vw,46px);line-height:1.1;letter-spacing:-.025em;text-wrap:balance}
+.sec-head h2{font-family:var(--display);font-weight:700;font-size:clamp(30px,3.6vw,46px);line-height:1.1;letter-spacing:-.025em;text-wrap:balance}
 .sec-head p{margin-top:16px;font-size:18px;color:var(--slate);line-height:1.7;max-width:640px}
 .dark .sec-head p{color:var(--on-dark-2)}
 .dark .sec-head h2{color:#fff}
@@ -489,7 +489,7 @@ footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
       <li><a href="#contact">Contact</a></li>
     </ul>
     <div class="nav-cta">
-      <a class="btn btn-ghost-dark" href="Debashish_Sarker_Portfolio.pdf" target="_blank" rel="noopener"><i class="ti ti-file-type-pdf"></i>Portfolio PDF</a>
+      <a class="btn btn-ghost-dark" href="Debashish_Sarker_Portfolio.pdf" download="Debashish_Sarker_Portfolio.pdf" data-pdf rel="noopener"><i class="ti ti-file-type-pdf"></i>Portfolio PDF</a>
       <a class="btn btn-brand" href="https://paysuite-workplace.web.app/" target="_blank" rel="noopener"><i class="ti ti-external-link"></i>Live platform</a>
       <button class="nav-toggle" id="navToggle" aria-label="Open menu" aria-expanded="false" aria-controls="navLinks"><i class="ti ti-menu-2"></i></button>
     </div>
@@ -502,11 +502,11 @@ footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
   <div class="wrap hero-grid">
     <div>
       <p class="hero-pill"><i></i>Assistant Manager, HR &amp; Administration</p>
-      <h1>HR leadership, with the engineering to build the systems it runs on.</h1>
-      <p class="hero-sub">I'm <b>Debashish Sarker</b>. I run HR operations at PaySuite Fintech Limited every day, and I built <b>PaySuite Workplace</b>, the payroll, leave, recruitment and compliance platform behind them.</p>
+      <h1>I lead HR, and I built the platform it runs on.</h1>
+      <p class="hero-sub">I'm <b>Debashish Sarker</b>, Assistant Manager of HR and Administration at PaySuite Fintech Limited. I personally designed, coded and deployed <b>PaySuite Workplace</b>, a cloud HRMS covering payroll, leave, attendance, recruitment, performance and compliance, and I use it to run live HR operations every day.</p>
       <div class="hero-cta">
         <a class="btn btn-brand" href="#demos"><i class="ti ti-player-play"></i>Try the live modules</a>
-        <a class="btn btn-ghost-dark" href="Debashish_Sarker_Portfolio.pdf" target="_blank" rel="noopener"><i class="ti ti-download"></i>Download portfolio PDF</a>
+        <a class="btn btn-ghost-dark" href="Debashish_Sarker_Portfolio.pdf" download="Debashish_Sarker_Portfolio.pdf" data-pdf rel="noopener"><i class="ti ti-download"></i>Download portfolio PDF</a>
       </div>
     </div>
 
@@ -568,9 +568,9 @@ footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
 <section class="sec" id="about">
   <div class="wrap about">
     <div class="about-text">
-      <div class="sec-head" style="margin-bottom:28px"><h2>I run the processes, and I build the tools that run them.</h2></div>
-      <p><b>Eight years inside HR departments</b> across fintech, architecture and manufacturing taught me where software usually fails: payroll edge cases, Bangladesh Labor Law detail, and the one employee whose leave balance never adds up.</p>
-      <p>Most HR tools weren't built for how local companies work. So I taught myself to build one. PaySuite Workplace is the result, designed by someone who has sat on both sides of the payslip and now keeps it running for live operations.</p>
+      <div class="sec-head" style="margin-bottom:28px"><h2>I run HR operations, and I built the system they run on.</h2></div>
+      <p><b>Eight years inside HR departments</b> across fintech, architecture and manufacturing showed me where HR software usually fails: payroll edge cases, Bangladesh Labor Law detail, and the employee whose leave balance never adds up.</p>
+      <p>Most HR tools are not built for how Bangladeshi companies work, so I built one myself. I wrote the requirements, designed the data model and security rules, and developed every module: 98 JavaScript modules and more than 110,000 lines of code on Firebase. As the HR owner and the sole developer, I understand both what the process needs and how the code must behave.</p>
       <div class="skills">
         <span class="skill">Payroll &amp; compensation</span><span class="skill">Bangladesh Labor Law</span><span class="skill">HRIS &amp; automation</span><span class="skill">Workforce planning</span><span class="skill">Performance management</span><span class="skill">Recruitment</span><span class="skill">Employee relations</span><span class="skill">Excel reporting</span>
       </div>
@@ -595,7 +595,7 @@ footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
   <div class="wrap">
     <div class="sec-head">
       <h2>One platform replacing spreadsheets, paper and scattered tools.</h2>
-      <p>Growing companies run attendance, leave, payroll and hiring across Excel files and chat threads. PaySuite Workplace brings them into one governed system with rules that follow Bangladesh Labor Law and income tax requirements.</p>
+      <p>Growing companies run attendance, leave, payroll and hiring across Excel files and chat threads. I built PaySuite Workplace to bring all of it into one governed system, with payroll, tax, leave and gratuity rules that follow Bangladesh Labor Law and income tax requirements.</p>
     </div>
     <div class="split">
       <div class="panel">
@@ -625,9 +625,9 @@ footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
       <div class="role" style="--rc:var(--green)"><i class="ti ti-user-check"></i><h4>Employee</h4><p>Self-service for leave, tasks, payslips and claims.</p></div>
     </div>
     <div class="rules">
-      <div class="rule"><h4><i class="ti ti-database"></i>Single source of truth</h4><p>Employee data is entered once and reused by attendance, leave, payroll, tax and documents.</p></div>
-      <div class="rule"><h4><i class="ti ti-adjustments"></i>Configurable by HR</h4><p>Leave policy, late rules, bonus rules and tax tables are settings, so updating a rule needs no code change.</p></div>
-      <div class="rule"><h4><i class="ti ti-tools"></i>Built to be maintained</h4><p>Modular numbered files, shared helpers and an automated standards check keep the code consistent.</p></div>
+      <div class="rule"><h4><i class="ti ti-database"></i>Single source of truth</h4><p>I designed one employee record that feeds attendance, leave, payroll, tax and documents, so data is entered once and never copied by hand.</p></div>
+      <div class="rule"><h4><i class="ti ti-adjustments"></i>Configurable by HR</h4><p>I made leave policy, late rules, bonus rules and tax tables configurable settings, so HR can change a rule without a developer.</p></div>
+      <div class="rule"><h4><i class="ti ti-tools"></i>Built to be maintained</h4><p>I structured the code as numbered modules with shared helpers and wrote an automated standards check, so it stays consistent and easy to extend.</p></div>
     </div>
   </div>
 </section>
@@ -637,7 +637,7 @@ footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
   <div class="wrap">
     <div class="sec-head">
       <h2>A complete HR suite, organised by purpose.</h2>
-      <p>More than 30 main pages and dozens of tabs across six areas. Menus, dashboards and actions are filtered by role, so each person sees only what matches their job.</p>
+      <p>I built more than 30 main pages and dozens of tabs across six areas. Menus, dashboards and actions are filtered by role, so each person sees only what matches their job.</p>
     </div>
     <div class="bento">
       <article class="bc"><div class="bc-ic"><i class="ti ti-users-group"></i></div><h3>People and organisation</h3><ul><li>Employee directory and profile</li><li>Departments, branches, staff categories</li><li>Organisation chart</li><li>Employee change ledger</li><li>Manager Hub for team leads</li></ul></article>
@@ -657,7 +657,7 @@ footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
   <div class="wrap">
     <div class="sec-head">
       <h2>Open any module and use it.</h2>
-      <p>Each card opens a working sandbox with sample data. Read how the logic works, then click, type and drag the sliders. No login needed.</p>
+      <p>Each card opens a working sandbox that mirrors the real calculation logic I wrote for the platform, using sample data. Read how it works, then click, type and drag the sliders. No login needed.</p>
     </div>
     <div class="filters" id="filters" role="group" aria-label="Filter modules"></div>
     <div id="mgrid"></div>
@@ -669,12 +669,12 @@ footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
   <div class="wrap">
     <div class="sec-head">
       <h2>Built like a product, run like a service.</h2>
-      <p>The platform is multi-tenant: one master codebase is distributed to separate client deployments, each on its own Firebase project, so data stays isolated per organisation.</p>
+      <p>I architected the platform as multi-tenant: one master codebase I maintain is released to separate client deployments, each on its own Firebase project, so every organisation's data stays isolated.</p>
     </div>
     <div class="eng">
-      <article class="ec"><i class="ti ti-shield-lock"></i><h3>Security in two layers</h3><p>Role-based access in the interface and again in 2,295 lines of Firestore security rules, plus separate Storage rules for uploaded files and input validation across forms.</p></article>
-      <article class="ec"><i class="ti ti-history"></i><h3>Traceable by default</h3><p>An audit log, an error log and an employee change ledger record who did what and when, so every figure can be explained in an audit.</p></article>
-      <article class="ec"><i class="ti ti-database-export"></i><h3>Recoverable</h3><p>Full-system backup export with restore, and a trash bin so deleted records can be brought back.</p></article>
+      <article class="ec"><i class="ti ti-shield-lock"></i><h3>Security in two layers</h3><p>I enforced role-based access in the interface and again in 2,295 lines of Firestore security rules that I wrote, plus separate Storage rules for uploaded files and input validation across forms.</p></article>
+      <article class="ec"><i class="ti ti-history"></i><h3>Traceable by default</h3><p>I added an audit log, an error log and an employee change ledger that record who did what and when, so every figure can be explained in an audit.</p></article>
+      <article class="ec"><i class="ti ti-database-export"></i><h3>Recoverable</h3><p>I built a full-system backup export with restore, and a trash bin so deleted records can be brought back.</p></article>
     </div>
     <div class="stackrow" aria-label="Technology stack">
       <span class="tech"><i class="ti ti-brand-html5"></i>HTML5</span>
@@ -701,7 +701,7 @@ footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
     </ol>
 
     <h3 class="pipe-title">How a change reaches a client</h3>
-    <p class="pipe-sub">A Deployment Manager shows differences, takes a backup and supports rollback before updates reach each client. Branding fallbacks stop developer branding from reaching customers.</p>
+    <p class="pipe-sub">I also built a Deployment Manager that shows differences, takes a backup and supports rollback before an update reaches each client, and branding fallbacks stop developer branding from reaching customers.</p>
     <ol class="pipe" style="padding:0">
       <li><i class="ti ti-code"></i><h4>Build</h4><p>Change the master codebase.</p></li>
       <li><i class="ti ti-clipboard-check"></i><h4>Check</h4><p>Run the standards script.</p></li>
@@ -716,8 +716,8 @@ footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
 <section class="sec" id="impact">
   <div class="wrap">
     <div class="sec-head">
-      <h2>Where HR experience meets hands-on building.</h2>
-      <p>I understand the people processes because I run them, and I build the tools that make them faster and more accurate.</p>
+      <h2>Where HR expertise meets hands-on engineering.</h2>
+      <p>I understand people processes because I run them, and I build the tools that make them faster and more accurate.</p>
     </div>
     <div class="impact">
       <div class="im"><b>Zero</b><h4>Major audit findings</h4><p>Across internal and external audits.</p></div>
@@ -735,7 +735,7 @@ footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
         </div>
       </div>
       <ol class="tl">
-        <li class="now"><time>Mar 2024 to present</time><h4>Assistant Manager, HR and Administration</h4><div class="co">PaySuite Fintech Limited</div><p>Own the full HR lifecycle, designed and built the in-house HRMS, and act as HR business partner to department heads.</p></li>
+        <li class="now"><time>Mar 2024 to present</time><h4>Assistant Manager, HR and Administration</h4><div class="co">PaySuite Fintech Limited</div><p>Own the full HR lifecycle, from hiring to exit. Designed and built the company's in-house HRMS, prepared the 2025 to 2030 manpower and cost plan, and act as HR business partner to department heads.</p></li>
         <li><time>Sep 2019 to Feb 2024</time><h4>Assistant Manager and Senior Executive, HR</h4><div class="co">Archaic Architects Limited</div><p>Ran payroll, rolled out a grievance framework that cut grievances by 20%, and introduced a transparent performance appraisal system.</p></li>
         <li><time>2018 to 2019</time><h4>Production Officer and HR Officer</h4><div class="co">Supreme Stitch Limited</div><p>HR operations in a manufacturing environment: records, attendance, recruitment support and reporting.</p></li>
       </ol>
@@ -748,10 +748,10 @@ footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
   <div class="wrap contact-grid">
     <div>
       <h2>Let's talk about your HR systems.</h2>
-      <p class="lead">A live walkthrough of the platform is available on request. If you're hiring for HR leadership or HR technology, I'd like to hear about the role.</p>
+      <p class="lead">I can walk you through the platform I built, live, on request. If you are hiring for HR leadership or HR technology, I would like to hear about the role.</p>
       <div class="hero-cta">
         <a class="btn btn-brand" href="mailto:shimul.aiub@gmail.com"><i class="ti ti-mail"></i>Send an email</a>
-        <a class="btn btn-ghost-dark" href="Debashish_Sarker_Portfolio.pdf" target="_blank" rel="noopener"><i class="ti ti-download"></i>Portfolio PDF</a>
+        <a class="btn btn-ghost-dark" href="Debashish_Sarker_Portfolio.pdf" download="Debashish_Sarker_Portfolio.pdf" data-pdf rel="noopener"><i class="ti ti-download"></i>Portfolio PDF</a>
       </div>
     </div>
     <div class="clist">
@@ -1304,6 +1304,23 @@ function drawDp(){$('dpL').innerHTML=DPS.map(function(s,i){var k=i<DP?'ok':(i===
   var n=$('dpN');n.disabled=DP>=5;n.innerHTML=DP>=5?'Deployed':'Run step: '+DPS[DP][0];$('dpR').style.display=DP>=5?'inline-flex':'none';
   $('dpM').innerHTML=DP>=5?'<div class="so ok">'+I('circle-check')+'<span><b>Deployed with a backup in place</b>If anything looks wrong, roll back to restore the snapshot.</span></div>':'';}
 function nextDp(){if(DP<5){DP++;drawDp();}}
+
+/* Portfolio PDF download: forces a real download and shows a clear message if the file is missing */
+document.querySelectorAll('a[data-pdf]').forEach(function(a){
+  a.addEventListener('click',function(e){
+    e.preventDefault();
+    var url=a.getAttribute('href');
+    fetch(url,{cache:'no-store'}).then(function(r){
+      if(!r.ok) throw new Error('missing');
+      return r.blob();
+    }).then(function(b){
+      var u=URL.createObjectURL(b), d=document.createElement('a');
+      d.href=u; d.download=a.getAttribute('download')||'Debashish_Sarker_Portfolio.pdf';
+      document.body.appendChild(d); d.click(); d.remove();
+      setTimeout(function(){URL.revokeObjectURL(u)},4000);
+    }).catch(function(){ window.open(url,'_blank','noopener'); });
+  });
+});
 </script>
 </body>
 </html>
